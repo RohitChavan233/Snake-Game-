@@ -48,6 +48,26 @@ Snake.py   # Main game file containing all logic and visuals
 
 ---
 
+---
+### ***How to use**
+
+```
+git clone https://github.com/RohitChavan233/Snake-Game-.git
+```
+
+```
+cd Snake-game-
+```
+
+```
+pip install -r requirements.txt
+```
+
+```
+python Snake.py
+```
+
+---
 ### **Customization**
 
 * **Speed:** Adjust the frame rate (`self.clock.tick(8)`) to change difficulty.
