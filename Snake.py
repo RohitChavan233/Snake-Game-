@@ -56,7 +56,10 @@ class Snake:
             new_head = (new_head[0], 0)
             
         # Check self collision
-        if new_head in self.body:
+        # Moving into the current tail position is valid when not growing,
+        # because the tail will move away in the same update.
+        collision_body = self.body if self.grow else self.body[:-1]
+        if new_head in collision_body:
             return False
             
         self.body.insert(0, new_head)
@@ -242,4 +245,3 @@ class Game:
 if __name__ == "__main__":
     game = Game()
     game.run()
-
